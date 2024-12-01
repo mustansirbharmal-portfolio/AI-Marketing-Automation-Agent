@@ -28,7 +28,7 @@ The system uses the **Retrieval-Augmented Generation (RAG)** method, where the c
 git clone https://github.com/your-username/Campaign-Insights-Chatbot-System.git
 cd Campaign-Insights-Chatbot-System
 
-### 2. Set up Azure OpenAI API credentials
+## 2. Set up Azure OpenAI API credentials
 (i) Sign up for an Azure account.
 (ii) Set up the OpenAI API and get your API key.
 (iii) Copy the API Key, API Version and Azure Endpoint and paste it in below line of code of app.py and embedding.py file:
