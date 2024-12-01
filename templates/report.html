@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/chart.js" rel="stylesheet">
+    <style>
+        .report-card {
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .performance-chart {
+            max-width: 100%;
+            height: 300px;
+        }
+        .key-metrics {
+            margin-top: 20px;
+        }
+        .insights-section {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Campaign Report</h1>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card report-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Campaign: {{ campaign_name }}</h5>
+                        <p><strong>Date:</strong> {{ report_date }}</p>
+
+                        <!-- Key Metrics Section -->
+                        <div class="key-metrics">
+                            <p><strong>CTR:</strong> {{ ctr }}%</p>
+                            <p><strong>ROAS:</strong> {{ roas }}x</p>
+                            <p><strong>CPA:</strong> {{ cpa }}</p>
+                            <p><strong>Conversions:</strong> {{ conversions }}</p>
+                            <p><strong>Spend:</strong> {{ spend }}</p>
+                        </div>
+
+                        <!-- Insights and Recommendations -->
+                        <div class="insights-section">
+                            <h6>Insights & Recommendations</h6>
+                            <ul>
+                                {% for insight in insights %}
+                                    <li>{{ insight }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <!-- Performance Chart (optional) -->
+                        <div class="performance-chart">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript and Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById('performanceChart').getContext('2d');
+        var performanceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],  // Sample data
+                datasets: [{
+                    label: 'Campaign Performance',
+                    data: [65, 59, 80, 81, 56], // Sample data
+                    fill: false,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    tension: 0.1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
