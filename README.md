@@ -1,3 +1,5 @@
+![Python]([https://example.com/image.jpg](https://www.shutterstock.com/image-vector/python-programming-language-icon-vector-2486626399))
+
 # AI-Marketing-Automation-Agent
 # Campaign Insights and Chatbot System
 
@@ -27,14 +29,19 @@ The system uses the **Data-driven architecture** to generate insights and ideas 
 git clone https://github.com/your-username/Campaign-Insights-Chatbot-System.git<br>
 cd Campaign-Insights-Chatbot-System<br>
 
+### 2. Install Dependencies
+Ensure you have Python 3.6+ installed. Then, install the required Python libraries using pip:<br>
+**pip install -r requirements.txt**
+
 ### 2. Set up Azure OpenAI API credentials
 **(i)** Sign up for an Azure account.<br>
 **(ii)** Set up the OpenAI API and get your API key.<br>
-**(iii)** Copy the API Key, API Version and Azure Endpoint and paste it in below line of code of app.py and embedding.py file:<br>
-client = AzureOpenAI(
-    api_key="",
-    api_version="",
-    azure_endpoint=""
+**(iii)** Copy the **API Key, API Version and Azure Endpoint** and paste it in below line of code of app.py and embedding.py file:<br>
+
+client = AzureOpenAI(<br>
+    api_key="",<br>
+    api_version="",<br>
+    azure_endpoint=""<br>
 )
 
 ### 3. Prepare the CSV data
