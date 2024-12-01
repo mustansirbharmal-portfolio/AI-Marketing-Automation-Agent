@@ -1,5 +1,3 @@
-![Python]([https://example.com/image.jpg](https://www.shutterstock.com/image-vector/python-programming-language-icon-vector-2486626399))
-
 # AI-Marketing-Automation-Agent
 # Campaign Insights and Chatbot System
 
@@ -33,7 +31,7 @@ cd Campaign-Insights-Chatbot-System<br>
 Ensure you have Python 3.6+ installed. Then, install the required Python libraries using pip:<br>
 **pip install -r requirements.txt**
 
-### 2. Set up Azure OpenAI API credentials
+### 3. Set up Azure OpenAI API credentials
 **(i)** Sign up for an Azure account.<br>
 **(ii)** Set up the OpenAI API and get your API key.<br>
 **(iii)** Copy the **API Key, API Version and Azure Endpoint** and paste it in below line of code of app.py and embedding.py file:<br>
@@ -44,13 +42,13 @@ client = AzureOpenAI(<br>
     azure_endpoint=""<br>
 )
 
-### 3. Prepare the CSV data
+### 4. Prepare the CSV data
 - A sample CSV file (campaign_data.csv) is included in the repository to test the system.<br>
 - Or use your file which includes of Campaign ID, Campaign Name, Impressions, Clicks, Conversions, Spend, Revenue and Status of CSV File Format.
 
 If you are using your file campaign data file then make sure you embed the file in embedding.py file and then run the file using command "python embedding.py"
 
-### 4. Run the system
+### 5. Run the system
 python app.py
 
 
