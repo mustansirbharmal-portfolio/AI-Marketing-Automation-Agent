@@ -38,8 +38,8 @@ client = AzureOpenAI(
 )
 
 ### 3. Prepare the CSV data
-A sample CSV file (campaign_data.csv) is included in the repository to test the system.<br>
-Or use your file which includes of Campaign ID, Campaign Name, Impressions, Clicks, Conversions, Spend, Revenue and Status of CSV File Format.
+- A sample CSV file (campaign_data.csv) is included in the repository to test the system.<br>
+- Or use your file which includes of Campaign ID, Campaign Name, Impressions, Clicks, Conversions, Spend, Revenue and Status of CSV File Format.
 
 If you are using your file campaign data file then make sure you embed the file in embedding.py file and then run the file using command "python embedding.py"
 
